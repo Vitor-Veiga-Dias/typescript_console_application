@@ -30,7 +30,7 @@ function printFirstNPrimes(n: number): void {
 
 export function startPimeNumbers(): void {
   console.log("prime numbers program")
-  const numPrimesStr = readlineSync.question('Enter the number of prime numbers to print: ');
+  const numPrimesStr = readlineSync.question('Enter the number: ');
   const numPrimes = parseInt(numPrimesStr);
 
   if (isNaN(numPrimes) || numPrimes <= 0) {
@@ -38,5 +38,12 @@ export function startPimeNumbers(): void {
     return;
   }
 
-  printFirstNPrimes(numPrimes);
+  if(isPrime(numPrimes)) {
+    console.log(`the numer ${numPrimes} is a prime number`)
+    printFirstNPrimes(numPrimes);
+    return
+  } else {
+    console.log(`the number ${numPrimes} is not a prime number`)
+  }
+
 }
