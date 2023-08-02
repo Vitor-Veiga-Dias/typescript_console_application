@@ -1,6 +1,6 @@
-# TypeScript Console Application Template
+# TypeScript Console Application
 
-This is a template for a TypeScript console application with the following features:
+This is a TypeScript console application with the following features:
 
 - Utilizes the `mathjs` library for performing various mathematical operations.
 - Uses the `readline-sync` library to get user input from the console.
@@ -20,7 +20,7 @@ Before running the application, make sure you have Node.js and npm (Node Package
 ```
 npm install
 ```
-3. running project
+3. run
 
 
 ```
