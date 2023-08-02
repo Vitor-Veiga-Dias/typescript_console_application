@@ -11,7 +11,7 @@ import {
 } from './programs';
 
 function shouldContinue(): boolean {
-  const choice = readlineSync.keyInYN('Do you want to continue to the next program? (y/n) ') as boolean;
+  const choice = readlineSync.keyInYN('Do you want to continue to the next program? ') as boolean;
   return choice;
 }
 
@@ -22,7 +22,7 @@ function runProgram(program: Function, programName: string): void {
 }
 
 function InitProgram() {
-  const startProgram = readlineSync.keyInYN('Do you want to start the programs? (y/n) ');
+  const startProgram = readlineSync.keyInYN('Do you want to start the programs? ');
 
   if (startProgram) {
     const programs = [
@@ -37,7 +37,7 @@ function InitProgram() {
     ];
 
     for (let i = 0; i < programs.length; i++) {
-      if (startProgram && shouldContinue()) {
+      if (shouldContinue()) {
         runProgram(programs[i], programs[i].name);
         if(programs[i].name === 'startCalculateFinalValue') {
             console.log('Finished programs')
