@@ -8,7 +8,7 @@ import {
   startcountVowels,
   startCalculateAverage,
   startCalculateFinalValue,
-} from './programs'; // Assuming all functions are exported from a single module called 'modules'
+} from './programs';
 
 function shouldContinue(): boolean {
   const choice = readlineSync.keyInYN('Do you want to continue to the next program? (y/n) ') as boolean;
